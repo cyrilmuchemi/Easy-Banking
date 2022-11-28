@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.navigation {
+    display: flex;
+    min-height: 70px;
+    margin-inline: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+.bar {
+    background-color: black;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        background-image: url("./src/assets/bg-intro-mobile.svg");
+        background-size: cover;
+        backface-visibility: visible;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        height: 80vh;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .intro {
+        margin-top: 3rem;
+    }
+
+    .intro h1 {
+        margin-inline: 4rem;
+        font-family: 'Public Sans';
+        font-weight: 400;
+        font-size: 32px;
+        color: #262626;
+        line-height: 44px;
+    }
+
+    .intro p {
+        font-family: 'public Sans';
+        color: gray;
+        margin-inline: 1rem;
+        margin-top: 1rem;
+    }
+
+    .button {
+        background-color: #1a9e69;
+        color: #fff;
+        border-radius: 35px;
+        border: none;
+        width: 180px;
+        height: 50px;
+        margin-inline: 5.3rem;
+        margin-top: 1.3rem;
+        font-family: 'Public Sans';
+        font-weight: 400;
+    }
+
+    #mid-section {
+        margin-top: 250px;
+        background-color: #FAF9F6;
+    }
+
+    .midsec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2.6rem;
+    }
+
+    .card h2 {
+        font-family: 'Public Sans';
+        font-weight: 400;
+        font-size: 32px;
+        width: 200px;
+        color: #262626;
+        line-height: 34px;
+    }
+
+    .card h3 {
+        font-family: 'Public Sans';
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 24px;
+        color: #262626;
+    }
+
+    .card p {
+        color: gray;
+        font-family: 'Public Sans';
+        margin-top: 1rem;
+        width: 336px;
+
+    }
+
+    #articles {
+        margin-top: 4.5rem;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container h3 {
+        font-family: 'Public Sans';
+        font-weight: 400;
+        font-size: 32px;
+        color: #262626;
+    } 
+
+    .article-card {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-inline: 1.8rem;
+        overflow: hidden;
+        margin-top: 2.7rem;
+    }
+
+    .article-card h4 {
+        color: gray;
+        font-size: 12px;
+        font-family: 'Public Sans';
+        margin-top: 1.8rem;
+    }
+
+    .article-card h5 {
+        color: #262626;
+        font-size: 18px;
+        font-family: 'Public Sans';
+        margin-top: -0.4px;
+    }
+
+    .article-card p {
+        color: gray;
+        font-family: 'Public Sans';
+        margin-top: -15px;
+    }
+
+    .mobile-footer {
+        margin-top: 2.5rem;
+        background-color: hsl(233, 26%, 24%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+    }
+
+    .social-icons {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        margin-top: 4rem;
+        margin-left: -3rem;
+    }
+
+    .footer-links {
+        list-style: none;
+        font-family: 'Public Sans';
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-footer p {
+        color: gray;
+        margin-top: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+}
