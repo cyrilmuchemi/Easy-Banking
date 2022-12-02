@@ -10,7 +10,19 @@
 <body>
     <head>
         <nav class="navigation">
-            <a href="#"><img src="./src/assets/logo.svg" alt="logo image"/></a>
+            <a id="logo" href="#"><img src="./src/assets/logo.svg" alt="logo image"/></a>
+            <div>
+                <ul class="navigation-list">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Blog</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="button">Request Invite</button>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -18,7 +30,8 @@
             </div>
         </nav>
     </head>
-    <section id="hero">
+    <section id="hero">  
+        <div class="hero">    
         <div class="phones">
             <img src="./src/assets/image-mockups.png" alt="phone mockups"/>
         </div>
@@ -33,14 +46,15 @@
             </p>
             <button class="button">Request Invite</button>
         </div>
+        </div>
     </section>   
     <section id="mid-section">
         <div class="midsec">
-            <div class="card">
+            <div id="top-card" class="card">
                 <h2>
                     Why choose Easybank?
                 </h2>
-                <p>
+                <p id="top-paragraph">
                     We leverage Open Banking to turn your bank
                     account into your financial hub. Control your
                     finances like never before
@@ -81,8 +95,8 @@
         </div>
     </section>
     <section id="articles">
+        <h3>Latest Articles</h3>
         <div class="article-container">
-            <h3>Latest Articles</h3>
             <div class="article-card">
                 <img src="./src/assets/image-currency.jpg" alt="money"/>
                 <h4>By Claire Robinson</h4>
@@ -92,7 +106,7 @@
                    So why should you be forced to receive money in a single...
                 </p>
             </div>
-            <div class="article-card">
+            <div id="carddd" class="article-card">
                 <img src="./src/assets/image-restaurant.jpg" alt="restaurant"/>
                 <h4>By Wilson Hutton</h4>
                 <h5>Treat yourself without worrying about money</h5>
@@ -144,6 +158,34 @@
             </div>
             <button class="button">Request Invite</button>
             <p>© Easybank. All Rights Reserved</p>
+        </div>
+        <div class="desktop-footer">
+            <div class="logo-sec">
+                <a id="logo" href="#"><img src="./src/assets/logo.svg" alt="logo image"/></a>
+                <ul class="social-icons">
+                    <li><img src="./src/assets/icon-facebook.svg" /></li>
+                    <li><img src="./src/assets/icon-youtube.svg" /></li>
+                    <li><img src="./src/assets/icon-twitter.svg" /></li>
+                    <li><img src="./src/assets/icon-pinterest.svg" /></li>
+                    <li><img src="./src/assets/icon-instagram.svg" /></li>
+                </ul>
+            </div>
+            <div class="footer-link-container">
+                <ul class="footer-links">
+                    <li>About Us</li>
+                    <li>Contact</li>
+                    <li>Blog</li>
+                </ul>
+                <ul class="footer-links">
+                    <li>Careers</li>
+                    <li>Support</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <button class="button">Request Invite</button>
+                <p>© Easybank. All Rights Reserved</p>
+            </div>
         </div>
     </footer>
     <script src="index.js"></script>

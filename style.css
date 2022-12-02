@@ -89,6 +89,20 @@ select {
     cursor: pointer;
 }
 
+.button {
+    background-color: #1a9e69;
+    color: #fff;
+    border-radius: 35px;
+    border: none;
+    width: 180px;
+    height: 50px;
+    margin-inline: 5.3rem;
+    margin-top: 1.3rem;
+    font-family: 'Public Sans';
+    font-weight: 400;
+    cursor: pointer;
+}
+
 
 .bar {
     background-color: black;
@@ -148,19 +162,6 @@ select {
         margin-top: 1rem;
     }
 
-    .button {
-        background-color: #1a9e69;
-        color: #fff;
-        border-radius: 35px;
-        border: none;
-        width: 180px;
-        height: 50px;
-        margin-inline: 5.3rem;
-        margin-top: 1.3rem;
-        font-family: 'Public Sans';
-        font-weight: 400;
-    }
-
     #mid-section {
         margin-top: 250px;
         background-color: #FAF9F6;
@@ -215,7 +216,7 @@ select {
         align-items: center;
     }
 
-    .article-container h3 {
+    #articles h3 {
         font-family: 'Public Sans';
         font-weight: 400;
         font-size: 32px;
@@ -282,4 +283,224 @@ select {
         margin-bottom: 2rem;
     }
 
+    .desktop-footer {
+        display: none;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .navigation-list {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        color: gray;
+        margin-top: 40px;
+    }
+
+    #logo {
+        margin-top: 30px;
+    }
+
+    #hero {
+        height: 100vh;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: row-reverse;
+        background-image: url('./src/assets/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-position-x: 300%;
+        background-position-y: 100%;
+        width: 100%;
+        background-origin: padding-box;
+    }
+
+    .phones {
+        margin-left: 400px;
+        margin-top: -7rem;
+    }
+
+    .intro {
+        margin-top: 10rem;
+    }
+
+    .intro h1 {
+        margin-inline: 4rem;
+        font-family: 'Public Sans';
+        font-weight: 400;
+        width: 300px;
+        font-size: 32px;
+        color: #262626;
+        line-height: 44px;
+    }
+
+    .intro p {
+        font-family: 'public Sans';
+        color: gray;
+        margin-inline: 4rem;
+        margin-top: 1rem;
+        width: 350px;
+    }
+
+    #mid-section {
+        background-color: #FAF9F6;
+        margin-top: -7rem;
+        position: relative;
+    }
+
+    .midsec {
+        padding-top: 5rem;
+        display: flex;
+    }
+
+    #top-card {
+        position: absolute;
+        margin-top: -3rem;
+    }
+
+    .card {
+        margin-top: 8.5rem;
+        margin-inline: 4.2rem;
+        margin-bottom: 3rem;
+    }
+
+    .card h2 {
+        font-family: 'Public Sans';
+        font-weight: 400;
+        font-size: 32px;
+        width: 200px;
+        color: #262626;
+    }
+
+    .card h3 {
+        font-family: 'Public Sans';
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 24px;
+        color: #262626;
+    }
+
+    .card p {
+        color: gray;
+        font-family: 'Public Sans';
+        margin-top: 1rem;
+
+    }
+
+    #top-paragraph {
+        width: 570px;
+    }
+
+    #articles {
+        margin-top: 4.5rem;
+    }
+
+    .article-container {
+        display: flex;
+        margin-inline: 3.2rem;
+        padding-top: 1rem;
+        gap: 35px;
+        width: 90%;
+    }
+
+    .article-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .article-card img {
+        height: 30vh;
+        width: 100%;
+    }
+
+    #articles h3 {
+        font-family: 'Public Sans';
+        font-weight: 400;
+        font-size: 32px;
+        margin-left: 3rem;
+        color: #262626;
+    } 
+
+    .article-card h4 {
+        color: gray;
+        font-size: 12px;
+        font-family: 'Public Sans';
+        margin-top: 1.4rem;
+    }
+
+    .article-card h5 {
+        color: #262626;
+        font-size: 18px;
+        font-family: 'Public Sans';
+        margin-top: -0.1px;
+    }
+
+    .article-card p {
+        color: gray;
+        font-family: 'Public Sans';
+        margin-top: -20px;
+    }
+
+    .mobile-footer {
+        display: none;
+    }
+
+    .desktop-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 2.2rem;
+        background-color: hsl(233, 26%, 24%);
+        margin-top: 9rem;
+        padding-bottom: 2.6rem;
+    }
+
+    .logo-sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        list-style: none;
+    }
+
+    .footer-link-container {
+        display: flex;
+        margin-top: 1.3rem;
+        justify-content: space-between ;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 0.7rem;
+        color: #fff;
+    }
+
+    .desktop-footer p {
+        color: gray;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
 }
