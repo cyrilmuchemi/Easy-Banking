@@ -59,6 +59,14 @@ select {
   font: inherit;
 }
 
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --lime-green-lighter: hsl(136, 65%, 80%);
+    --bright-cyan-lighter: hsl(192, 70%, 80%);
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -90,7 +98,8 @@ select {
 }
 
 .button {
-    background-color: #1a9e69;
+    background-color: var(--bright-cyan);
+    background: linear-gradient(117deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
     color: #fff;
     border-radius: 35px;
     border: none;
@@ -142,8 +151,43 @@ select {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .navigation-list {
+        display: flex;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        padding-top: 2rem;
+        gap: 20px;
+        height: 40vh;
+        list-style: none;
+        flex-direction: column;
+        width: 80%;
+        border-radius: 10px;
+        margin-inline: 2.2rem;
+        align-items: center;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+
+    .navigation-list a {
+        font-weight: 700;
+        color: black;
+        text-decoration: none;
+        font-family: 'Public Sans';
+    }
+
+    .navigation-list.active {
+        left: 0;
+    }
+
     .intro {
-        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro p {
+        width: 76%;
     }
 
     .intro h1 {
@@ -217,6 +261,7 @@ select {
     }
 
     #articles h3 {
+        text-align: center;
         font-family: 'Public Sans';
         font-weight: 400;
         font-size: 32px;
@@ -283,6 +328,12 @@ select {
         margin-bottom: 2rem;
     }
 
+    .icons-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.4rem;
+    }
+
     .desktop-footer {
         display: none;
     }
@@ -299,8 +350,17 @@ select {
         display: flex;
         list-style: none;
         gap: 50px;
-        color: gray;
         margin-top: 40px;
+    }
+
+    .navigation a {
+        color: gray;
+        text-decoration: none;
+        font-family: 'Public Sans';
+    }
+
+    .navigation-list :hover {
+        color: var(--lime-green);
     }
 
     #logo {
@@ -405,10 +465,10 @@ select {
 
     .article-container {
         display: flex;
-        margin-inline: 3.2rem;
+        margin-inline: 2rem;
         padding-top: 1rem;
         gap: 35px;
-        width: 90%;
+        width: 95%;
     }
 
     .article-card {
@@ -469,12 +529,14 @@ select {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 45px;
+        gap: 25px;
     }
 
     .social-icons {
         display: flex;
         gap: 15px;
+        color: #fff;
+        cursor: pointer;
         align-items: center;
         list-style: none;
     }
@@ -502,5 +564,13 @@ select {
         flex-direction: column;
         gap: 1.2rem;
         align-items: center;
+    }
+
+    .footer-links :hover {
+        color: var(--lime-green);
+    }
+
+    .social-icons li :hover {
+        color: var(--lime-green);
     }
 }
